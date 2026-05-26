@@ -4,6 +4,8 @@
 
 A static blog post by Josh Reese (July 31, 2018) explaining how interpreters and compilers work, using Python as a practical example.
 
+**Live:** [interpreters.middleearth.rocks](https://interpreters.middleearth.rocks/)
+
 ## Running locally
 
 ```bash
