@@ -1,8 +1,10 @@
 # Interpreters: The Magic That Runs Your Python Code
 
-![Cloudflare build status](https://img.shields.io/github/check-runs/droptablestar/interpreters-blog/main)
+![Cloudflare build status](https://img.shields.io/github/checks-status/droptablestar/interpreters-blog/main)
 
 A static blog post by Josh Reese (July 31, 2018) explaining how interpreters and compilers work, using Python as a practical example.
+
+**Live:** [interpreters.middleearth.rocks](https://interpreters.middleearth.rocks/)
 
 ## Running locally
 
