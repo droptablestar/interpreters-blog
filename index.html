@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Interpreters: The Magic That Runs Your Python Code</title>
+  <meta name="author" content="Josh Reese"/>
+  <style>
+:root{color-scheme:light;}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.65;color:#111;background:#fff;}
+header{padding:48px 20px 24px;border-bottom:1px solid #eee;background:#fafafa;}
+main{max-width:820px;margin:0 auto;padding:28px 20px 72px;}
+h1{font-size:40px;line-height:1.15;margin:0 0 10px;}
+.meta{font-size:14px;color:#555;}
+article h2{font-size:28px;margin-top:34px;line-height:1.25;}
+article h3{font-size:20px;margin-top:26px;}
+p{margin:14px 0;}
+a{color:#0b57d0;text-decoration:none;}
+a:hover{text-decoration:underline;}
+pre{overflow:auto;padding:14px 16px;border-radius:10px;background:#0f172a;color:#e5e7eb;line-height:1.55;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.95em;}
+pre code{color:inherit;}
+blockquote{margin:18px 0;padding:2px 18px;border-left:4px solid #ddd;color:#333;background:#fafafa;border-radius:8px;}
+img{max-width:100%;height:auto;border-radius:10px;}
+figure{margin:22px 0;}
+figcaption{font-size:13px;color:#555;margin-top:8px;}
+hr{border:none;border-top:1px solid #eee;margin:34px 0;}
+ul,ol{padding-left:22px;}
+li{margin:6px 0;}
+table{border-collapse:collapse;width:100%;margin:18px 0;}
+th,td{border:1px solid #e5e7eb;padding:10px;vertical-align:top;}
+small{color:#555;}
+</style>
+</head>
+<body>
+  <header>
+    <div style="max-width:820px;margin:0 auto;">
+      <h1>Interpreters: The Magic That Runs Your Python Code</h1>
+      <div class="meta">Josh Reese • July 31, 2018</div>
+    </div>
+  </header>
+  <main>
+    <article>
+      
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;">Programmers have not always been fortunate enough for programming languages as understandable as those available today. Binary is the only language computers truly speak, and it is foreign to what humans are accustomed to using. Programs written in what is known as “higher-level” languages (those which are easier for humans to read) turn into a series of 1’s and 0’s computers can read. There are two main ways this can happen: compiling and interpreting.</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14pt;"><strong> 1. </strong><strong>Compiling</strong></span></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">The job of the compiler is to translate a program to instructions specific to a type of computer, be it running Windows, MacOS, a Raspberry Pi, etc. Each of these has different hardware which can respond to different instructions, and a compiler only targets one of them at a time. </span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14pt;"><strong> 2. </strong></span><span style="font-size: 14pt;"><strong>Interpreting</strong></span></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">Interpreters are a bit different – they do not actually create another program to be executed but run programs themselves.  It might seem strange that there would be two different ways for this to work. Compilers have this extra step of translating before executing, while interpreters run the code directly. A great example is when interpreters run Python code.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">While these two techniques are similar in what they are trying to do (get programs to run), how they go about it is extremely different. One key difference is in terms of performance. Since a compiler targets a particular set of hardware, it can more intelligently apply optimizations to make the program more efficient. Though these are two different techniques, the majority of steps needed for both a compiler and an interpreter to go from human-written code to a program a computer can run are the same:</span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i1.png"><img alt="i1" class="alignnone size-full wp-image-5828" height="420" src="./assets/i1.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">T</span><span style="font-weight: 400;">his process is generally broken into three sections: front-end, middle, and back-end. Where the front-end mainly deals with the structure of the program, the middle deals more with the meaning, and the back-end handles the lower level parts.</span></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;"><strong>Scanning</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">The first step towards getting a program ready to run is called </span><b>scanning</b><span style="font-weight: 400;">. There are some things humans put in their programs which, for the most part, are only there, so the code is more readable (spaces, lines of code, etc.) It is the job of the scanner to remove all of this and turn each meaningful part of the program into smaller pieces called </span><b>tokens</b><span style="font-weight: 400;">. These tokens are just like the words and punctuation used in traditional written and spoken languages. Take the following Python code: </span></span></p>
+<p style="text-align: center;"><span style="font-size: 24pt; font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400; color: #ff6600;">def</span> <span style="font-weight: 400; color: #3366ff;">foo</span><span style="font-weight: 400;"><span style="color: #000000;">(</span><span style="color: #808080;">a</span><span style="color: #000000;">):</span></span><span style="font-weight: 400;"><br/>
+</span><span style="font-weight: 400;">  <span style="color: #000000;">x </span></span><span style="color: #333333;">= </span><span style="font-weight: 400; color: #ff00ff;">2</span></span></p>
+<p style="text-align: center;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">This will get turned into a series of tokens something like:</span></p>
+<p style="text-align: center;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i2.png"><img alt="i2" class="alignnone size-full wp-image-5829" height="300" src="./assets/i2.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">In Python, the placing of spaces and lines is important, just like in some English writing (e.g., poetry), so the scanner won’t remove them because they do, in fact, have meaning. Now all of the unnecessary stuff has been removed; the process can continue with the next step: parsing.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;"><strong>Parsing</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">Programming languages, like all human languages, have a grammar that defines their structure, order, and the meaning of each word and symbol. In English, this might look something like</span><span style="font-weight: 400;">:</span></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i3.png"><img alt="i3" class="alignnone size-full wp-image-5830" height="420" src="./assets/i3.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;"> </span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">The primary goal of this phase is to generate what is called an </span><b>Abstract Syntax Tree (AST)</b><span style="font-weight: 400;">. This is nothing more than a way to represent the program in a form easy for the interpreter to look at. While the AST is being created, the program will be checked to make sure it adheres to the grammar the language requires. Continuing with the previous example, this might get turned into a tree which looks something like:</span></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i4.png"><img alt="i4" class="alignnone size-full wp-image-5831" height="420" src="./assets/i4.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">Assuming the program passes all the tests in the front-end, it is time to move to the middle. </span></p>
+<p style="text-align: left;"><span style="font-size: 14pt;"><strong>Semantic Analysis &amp; Intermediate Representations</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">If parsing checks to make sure the program looks right, the next logical step would be to ensure the program makes sense. Does it try to add things which cannot be added together? Does it compare things which do not make sense to compare? During this phase, the interpreter will also create some way to find variables the program is using. This way when it comes across a statement, it knows exactly where to find what it needs. </span><span style="font-weight: 400;">   </span></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i5.png"><img alt="i5" class="alignnone size-full wp-image-5832" height="420" src="./assets/i5.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">Armed with this new table (often called a </span><b>symbol table</b><span style="font-weight: 400;">) it is time to generate something the back end can use. This is generally called an </span><b>intermediate representation</b> <b>(IR),</b><span style="font-weight: 400;"> and it is the final part of the middle portion. One key advantage of creating this IR is that almost any language can now be translated into it and leverage all the power of the back-end. This starts with optimization.</span></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;"><strong>Optimization</strong></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">Programmers are not perfect. Writing code which is maintainable and easy to understand is challenging. Not only is writing good code difficult, but it is often the case that code which is easy to understand comes at the cost of code which runs efficiently. It is the job of the optimizer to take the understandable human-written code and make it better. </span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">There is an incredible amount of complexity and magic to this step –  code might get reorganized, parts might get removed and rewritten. Anything to make the program run faster, use less memory, consume less power or whatever “better” means for that particular program. Now the program has been optimized, and it is time to create something that can be executed.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;"><strong>Code Generation</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">Depending on how the program is being executed, the code that is being generated in this step will be very different. While there are many different ways of running a program, one popular way for interpreters is to generate what is known as </span><b>bytecode. </b></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-weight: 400;">While generating bytecode is technically “compiling” it is not the code that is meant to run on an actual physical machine, so it is separate from what a classic compiler is doing. This is a language interpreters understand, and it tells them what actions need to be performed. Bytecode will often be run on what is known as a </span><b>virtual machine (VM)</b><span style="font-weight: 400;">. These VMs have everything that makes up a real computer, but it is all software, not hardware. Now any bytecode which the VM understands can be run on any computer which can use the VM. As an example of what this might look like consider the previous Python code and what the bytecode one of the VMs that runs Python uses:</span></span></p>
+<p style="text-align: justify;"><span style="font-family: Arial, Helvetica, sans-serif;"><a class="fancybox image" href="./assets/i6.png"><img alt="i6" class="alignnone size-full wp-image-5833" height="420" src="./assets/i6.png" width="1000"/></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">This bytecode does not look as pretty as the code it came from, but that is the whole point – take what a human wants to read and turn it into what a computer knows how to read. Now that the interpreter has this, it can start running the program, line by line.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400; font-family: Arial, Helvetica, sans-serif;">The journey has been long, but it is over. There are a lot of steps to get from what a programmer writes and how a computer runs it, this being only one of many ways. In the end though, looking at each step individually it is not so bad. Most programmers will never have to deal with this, but not understanding how programs run can lead to not fully understanding programming.</span></p>
+<p><strong>Some other interpreted languages:</strong><br/>
+<strong><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a>, <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">Ruby</a>, <a href="https://en.wikipedia.org/wiki/R_(programming_language)" target="_blank">R</a></strong></p>
+<p><strong>Resources:</strong><br/>
+<a href="https://photobucket.com/gallery/user/shmi11y/media/cGF0aDpVb1MgTGluZ1NpdGUvdG9tcHVzaGVkdGhlY2FyLnBuZw==/?ref="></a><span style="text-decoration: underline;"><strong><a href="https://photobucket.com/gallery/user/shmi11y/media/cGF0aDpVb1MgTGluZ1NpdGUvdG9tcHVzaGVkdGhlY2FyLnBuZw==/?ref=" target="_blank">English grammar image</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="https://hackernoon.com/compilers-and-interpreters-3e354a2e41cf" target="_blank">https://hackernoon.com/compilers-and-interpreters-3e354a2e41cf</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="https://opensource.com/article/18/4/introduction-python-bytecode" target="_blank">https://opensource.com/article/18/4/introduction-python-bytecode</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="http://craftinginterpreters.com/a-map-of-the-territory.html"></a><a href="http://craftinginterpreters.com/a-map-of-the-territory.html" target="_blank">http://craftinginterpreters.com/a-map-of-the-territory.html</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="https://devguide.python.org/compiler/"></a><a href="https://devguide.python.org/compiler/" target="_blank">https://devguide.python.org/compiler/</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="https://en.wikipedia.org/wiki/Optimizing_compiler#SSA-based_optimizations"></a><a href="https://en.wikipedia.org/wiki/Optimizing_compiler#SSA-based_optimizations" target="_blank">https://en.wikipedia.org/wiki/Optimizing_compiler#SSA-based_optimizations</a></strong></span><br/>
+<span style="text-decoration: underline;"><strong><a href="https://en.wikipedia.org/wiki/Virtual_machine"></a><a href="https://en.wikipedia.org/wiki/Virtual_machine" target="_blank">https://en.wikipedia.org/wiki/Virtual_machine</a></strong></span></p>
+<p class="no-break"> </p> 
+    </article>
+  </main>
+</body>
+</html>

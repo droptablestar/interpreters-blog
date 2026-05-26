@@ -1,0 +1,406 @@
+			@font-face {
+				font-family: 'avenir_light';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150730063658avenir_light.eot');
+				src: local('avenir_light'), url('/blog/wp-content/uploads/useanyfont/150730063658avenir_light.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150730063658avenir_light.woff') format('woff');
+			}
+            
+            .avenir_light{font-family: 'avenir_light' !important;}
+            
+					@font-face {
+				font-family: 'avenir_medium';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150730063722avenir_medium.eot');
+				src: local('avenir_medium'), url('/blog/wp-content/uploads/useanyfont/150730063722avenir_medium.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150730063722avenir_medium.woff') format('woff');
+			}
+            
+            .avenir_medium{font-family: 'avenir_medium' !important;}
+            
+					@font-face {
+				font-family: 'avenir_black';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150730063832avenir_black.eot');
+				src: local('avenir_black'), url('/blog/wp-content/uploads/useanyfont/150730063832avenir_black.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150730063832avenir_black.woff') format('woff');
+			}
+            
+            .avenir_black{font-family: 'avenir_black' !important;}
+            
+					@font-face {
+				font-family: 'georgia';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150730063858georgia.eot');
+				src: local('georgia'), url('/blog/wp-content/uploads/useanyfont/150730063858georgia.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150730063858georgia.woff') format('woff');
+			}
+            
+            .georgia{font-family: 'georgia' !important;}
+            
+					@font-face {
+				font-family: 'avenir heavy';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150730063933avenir-heavy.eot');
+				src: local('avenir heavy'), url('/blog/wp-content/uploads/useanyfont/150730063933avenir-heavy.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150730063933avenir-heavy.woff') format('woff');
+			}
+            
+            .avenir heavy{font-family: 'avenir heavy' !important;}
+            
+					@font-face {
+				font-family: 'georgia_bold';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150825090638georgia_bold.eot');
+				src: local('georgia_bold'), url('/blog/wp-content/uploads/useanyfont/150825090638georgia_bold.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150825090638georgia_bold.woff') format('woff');
+			}
+            
+            .georgia_bold{font-family: 'georgia_bold' !important;}
+            
+					@font-face {
+				font-family: 'georgia_italic';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/150827045120georgia_italic.eot');
+				src: local('georgia_italic'), url('/blog/wp-content/uploads/useanyfont/150827045120georgia_italic.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/150827045120georgia_italic.woff') format('woff');
+			}
+            
+            .georgia_italic{font-family: 'georgia_italic' !important;}
+            
+					@font-face {
+				font-family: 'proximanova regular';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/180314082805proximanova-regular.eot');
+				src: local('proximanova regular'), url('/blog/wp-content/uploads/useanyfont/180314082805proximanova-regular.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/180314082805proximanova-regular.woff') format('woff');
+			}
+            
+            .proximanova regular{font-family: 'proximanova regular' !important;}
+            
+					@font-face {
+				font-family: 'proximanova xtrabold';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/180314082836proximanova-xtrabold.eot');
+				src: local('proximanova xtrabold'), url('/blog/wp-content/uploads/useanyfont/180314082836proximanova-xtrabold.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/180314082836proximanova-xtrabold.woff') format('woff');
+			}
+            
+            .proximanova xtrabold{font-family: 'proximanova xtrabold' !important;}
+            
+					@font-face {
+				font-family: 'proximanova bold';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/180314082852proximanova-bold.eot');
+				src: local('proximanova bold'), url('/blog/wp-content/uploads/useanyfont/180314082852proximanova-bold.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/180314082852proximanova-bold.woff') format('woff');
+			}
+            
+            .proximanova bold{font-family: 'proximanova bold' !important;}
+            
+					@font-face {
+				font-family: 'proximanova light';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/180314082907proximanova-light.eot');
+				src: local('proximanova light'), url('/blog/wp-content/uploads/useanyfont/180314082907proximanova-light.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/180314082907proximanova-light.woff') format('woff');
+			}
+            
+            .proximanova light{font-family: 'proximanova light' !important;}
+            
+					@font-face {
+				font-family: 'proximanova_regular';
+				font-style: normal;
+				src: url('/blog/wp-content/uploads/useanyfont/180314083524proximanova_regular.eot');
+				src: local('proximanova_regular'), url('/blog/wp-content/uploads/useanyfont/180314083524proximanova_regular.eot') format('embedded-opentype'), url('/blog/wp-content/uploads/useanyfont/180314083524proximanova_regular.woff') format('woff');
+			}
+            
+            .proximanova_regular{font-family: 'proximanova_regular' !important;}
+            
+						.catchresponsive-nav-menu a{
+					font-family: 'avenir_medium' !important;
+				}
+						.site-title a{
+					font-family: 'avenir_black' !important;
+				}
+						.site-description{
+					font-family: 'avenir_light' !important;
+				}
+						#feature-slider .entry-container p{
+					font-family: 'avenir_light' !important;
+				}
+						#feature-slider .entry-title span{
+					font-family: 'avenir_black' !important;
+				}
+						p{
+					font-family: 'georgia' !important;
+				}
+						.entry-header .entry-title a{
+					font-family: 'avenir_black' !important;
+				}
+						#featured-content #featured-heading{
+					font-family: 'avenir_black' !important;
+				}
+						.entry-meta{
+					font-family: 'avenir_light' !important;
+				}
+						#mc4wp_widget-2 .widget-wrap form #subscribe input{
+					font-family: 'avenir_light' !important;
+				}
+						#mc4wp_widget-2 .widget-wrap .widget-title{
+					font-family: 'avenir_black' !important;
+				}
+						#mc4wp_widget-2 .widget-wrap form #subscribe #input_subscribe{
+					font-family: 'georgia' !important;
+				}
+						.stb-content h2{
+					font-family: 'avenir_black' !important;
+				}
+						.stb-content form #subscribe #submit_button{
+					font-family: 'avenir_light' !important;
+				}
+						.stb-content form #subscribe #input_subscribe{
+					font-family: 'georgia' !important;
+				}
+						#breadcrumb-list span{
+					font-family: 'avenir_light' !important;
+				}
+						#footer .container #main_footer #location ul li p{
+					font-family: 'avenir_light' !important;
+				}
+						#bottom_footer .container #media_trademark #dojo_trademark > :first-child{
+					font-family: 'avenir_medium' !important;
+				}
+						.apply_cta .container .apply_buttons a{
+					font-family: 'avenir_medium' !important;
+				}
+						.apply_cta .container .apply_cta_header h2{
+					font-family: 'avenir_black' !important;
+				}
+						#nav-below .wp-pagenavi a{
+					font-family: 'avenir_light' !important;
+				}
+						.widget-wrap .wpp-list li a{
+					font-family: 'avenir_medium' !important;
+				}
+						#primary #main .page-header .page-title{
+					font-family: 'avenir_medium' !important;
+				}
+						#wa_chpc_slider .chpcs_foo_content .chpcs_title a{
+					font-family: 'avenir_black' !important;
+				}
+						.headlines_carousel{
+					font-family: 'avenir_black' !important;
+				}
+						.a2a_kit h2{
+					font-family: 'avenir heavy' !important;
+				}
+						#author_name{
+					font-family: 'avenir heavy' !important;
+				}
+						.comment-respond .comment-reply-title{
+					font-family: 'avenir_black' !important;
+				}
+						#commentform .comment-form-comment label{
+					font-family: 'avenir_black' !important;
+				}
+						.single-post  .entry-container .entry-header .entry-title{
+					font-family: 'avenir_black' !important;
+				}
+						.category #page #content .wrapper #primary #main .page-header .page-title{
+					font-family: 'avenir_black' !important;
+				}
+						#recent_post_category .srp-widget-container .srp-widget-singlepost .srp-post-content-container .srp-content-box .srp-post-title{
+					font-family: 'avenir_black' !important;
+				}
+						#recent_post_category .srp-widget-container .srp-widget-singlepost .srp-post-content-container .srp-content-box .srp-post-date{
+					font-family: 'avenir_light' !important;
+				}
+						#recent_post_category .srp-widget-container .srp-widget-singlepost .srp-post-content-container .srp-content-box .srp-post-content{
+					font-family: 'georgia' !important;
+				}
+						#recent_post_category h3{
+					font-family: 'avenir_medium' !important;
+				}
+						.entry-content ul > li{
+					font-family: 'georgia' !important;
+				}
+						#recent_post_category h3{
+					font-family: 'avenir_black' !important;
+				}
+						.modified_meta span{
+					font-family: 'avenir_light' !important;
+				}
+						.modified_meta a{
+					font-family: 'avenir_light' !important;
+				}
+						.maxbutton-9-container .maxbutton-9{
+					font-family: 'avenir_medium' !important;
+				}
+						#commentform .form-submit #submit{
+					font-family: 'avenir_medium' !important;
+				}
+						#author_name span{
+					font-family: 'avenir_light' !important;
+				}
+						.comment-body .comment-meta *{
+					font-family: 'avenir_medium' !important;
+				}
+						.widget-wrap h4{
+					font-family: 'avenir heavy' !important;
+				}
+						#main:before{
+					font-family: 'avenir heavy' !important;
+				}
+						#recent_post_category h2{
+					font-family: 'avenir heavy' !important;
+				}
+						#mc4wp_widget-2 .widget-wrap form p{
+					font-family: 'avenir_light' !important;
+				}
+						input[type=\"search\"]{
+					font-family: 'georgia' !important;
+				}
+						.nav-primary .search-field{
+					font-family: 'georgia' !important;
+				}
+						#topmost_navigation .container ul li a{
+					font-family: 'avenir_medium' !important;
+				}
+						.chpcs_more a{
+					font-family: 'georgia' !important;
+				}
+						#header-right-nav .menu-item-has-children >a{
+					font-family: 'avenir heavy' !important;
+				}
+						#header-right-nav .menu-item-has-children .sub-menu li a{
+					font-family: 'avenir_light' !important;
+				}
+						.search input{
+					font-family: 'georgia' !important;
+				}
+						li{
+					font-family: 'avenir_light' !important;
+				}
+						li strong{
+					font-family: 'avenir_black' !important;
+				}
+						.entry-content p strong{
+					font-family: 'georgia_bold' !important;
+				}
+						.cptch_input{
+					font-family: 'georgia' !important;
+				}
+						.comment-form-comment #comment{
+					font-family: 'georgia' !important;
+				}
+						.error404 .page-content .search-form input[type=submit]{
+					font-family: 'georgia' !important;
+				}
+						.error404 .page-content .search-form input[type=search]{
+					font-family: 'georgia' !important;
+				}
+						ul li{
+					font-family: 'georgia' !important;
+				}
+						ul li strong{
+					font-family: 'georgia_bold' !important;
+				}
+						h1{
+					font-family: 'avenir_black' !important;
+				}
+						h2{
+					font-family: 'avenir_black' !important;
+				}
+						h4{
+					font-family: 'avenir_medium' !important;
+				}
+						h5{
+					font-family: 'avenir_light' !important;
+				}
+						.entry-content h3{
+					font-family: 'avenir_black' !important;
+				}
+						#download_guide .guide_details .content_preview h3{
+					font-family: 'avenir_light' !important;
+				}
+						#download_guide .guide_details .content_preview h2{
+					font-family: 'avenir heavy' !important;
+				}
+						#download_guide .guide_details .content_preview ul li{
+					font-family: 'avenir_light' !important;
+				}
+						.wpcf7-form p input[type=\\\"submit\\\"]{
+					font-family: 'avenir heavy' !important;
+				}
+						.wpcf7-form p input[type=submit]{
+					font-family: 'avenir heavy' !important;
+				}
+						.bold_text{
+					font-family: 'avenir_black' !important;
+				}
+						div.wpcf7-validation-errors{
+					font-family: 'georgia' !important;
+				}
+						.wpcf7-form p input[type=email]{
+					font-family: 'georgia' !important;
+				}
+						div.wpcf7-mail-sent-ng{
+					font-family: 'georgia' !important;
+				}
+						#mobile_content_preview ul li{
+					font-family: 'avenir_light' !important;
+				}
+						#download_guide .mobile_content_preview h2{
+					font-family: 'avenir heavy' !important;
+				}
+						#download_guide .mobile_content_preview h3{
+					font-family: 'avenir_light' !important;
+				}
+						.wpcf7-mail-sent-ok{
+					font-family: 'georgia' !important;
+				}
+						#wpm_download_2 a{
+					font-family: 'georgia_bold' !important;
+				}
+						#wpm_download_1 a{
+					font-family: 'georgia_bold' !important;
+				}
+						#download_guide .guide_details .icon-button{
+					font-family: 'georgia_bold' !important;
+				}
+						.sumome-popup-text{
+					font-family: 'georgia' !important;
+				}
+						.sumome-popup-heading{
+					font-family: 'avenir_black' !important;
+				}
+						.sumome-popup-button{
+					font-family: 'avenir_light' !important;
+				}
+						.sumome-popup-input{
+					font-family: 'georgia' !important;
+				}
+						#ebook_conversion .mc4wp-form p input[type=submit]{
+					font-family: 'avenir_medium' !important;
+				}
+						#ebook_conversion .mc4wp-form p input[type=email]{
+					font-family: 'georgia' !important;
+				}
+						#ebook_conversion .mc4wp-form .mc4wp-error{
+					font-family: 'georgia' !important;
+				}
+						#ebook_conversion .mc4wp-form .mc4wp-success{
+					font-family: 'georgia' !important;
+				}
+						.amazingcarousel-title{
+					font-family: 'avenir_black' !important;
+				}
+						#wonderplugincarousel-1 .amazingcarousel-description{
+					font-family: 'georgia' !important;
+				}
+						body{
+					font-family: 'proximanova regular' !important;
+				}
+						body{
+					font-family: 'proximanova xtrabold' !important;
+				}
+						body{
+					font-family: 'proximanova bold' !important;
+				}
+						body{
+					font-family: 'proximanova light' !important;
+				}
+						body{
+					font-family: 'proximanova_regular' !important;
+				}
+		
